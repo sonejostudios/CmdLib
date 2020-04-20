@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>466</width>
-    <height>317</height>
+    <height>339</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -72,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>140</y>
+     <y>160</y>
      <width>441</width>
      <height>111</height>
     </rect>
@@ -92,13 +92,26 @@ Have fun!</string>
    <property name="geometry">
     <rect>
      <x>370</x>
-     <y>270</y>
+     <y>290</y>
      <width>79</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Ok</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>351</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>License: GPL 3.0</string>
    </property>
   </widget>
  </widget>
