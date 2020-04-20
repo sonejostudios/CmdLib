@@ -1,0 +1,35 @@
+name,command,category,hold,multicmd,ps,script,description
+Welcome,"echo ""°°° Welcome to CmdLib! °°°""",General,True,False,False,False,"Welcome to CmdLib!
+
+Please run this command with hold."
+Start Firefox,firefox,Internet,False,False,False,False,Open Firefox Web Browser.
+Notify Hello World,"notify-send ""hello world""",General,False,False,False,False,Notify
+"Cowsay ""Hi!""",cowsay hi!,Fun,True,False,False,False,-
+"Say ""Hello World""","espeak ""hello world""",Fun,False,False,False,False,"Use espeak to say ""hello world"""
+Convert Video,ffmpeg -i  video.mkv  video.mp4,Video,False,False,False,False,Convert Video with ffmpeg
+Watch Star Wars,telnet towel.blinkenlights.nl,Fun,False,False,False,False,Watch star wars via telnet.
+Start Script Test,sh export_test.sh,Scripts,False,False,False,True,Script launcher test
+Python Script,python3 python_notify.py,Scripts,False,False,False,True,Notify Hello World with a python script
+Pixelize Image,"convert -scale 50%  IMAGE_FILE  -magnify  PIXELIMAGE_FILE
+
+# for more pixelization:
+#convert -scale 25%  IMAGE_FILE  -magnify -magnify  PIXELIMAGE_FILE",Graphics,False,True,False,False,Pixelize image using Imagemagick.
+MultiCmd Test,"notify-send ""This is a test, with the goal to test multi-command entries in CmdLib. This text is really long to check the word wrap of the command text field.""
+notify-send ""world""
+HOLD cowsay ""hello world""
+
+# this is a comment
+espeak ""hello world""
+",MultiCmds,False,True,False,False,Multi-Command (queue) test.
+MultiCmd Train Parallel,"# show the train
+sl
+
+# add sound
+espeak ""choo choo""
+",MultiCmds,False,True,False,False,Multi-Command (parallel run) test.
+MultiCmd Train Serial,"# show the train
+sl
+
+# add sound
+espeak ""choo choo""
+",MultiCmds,False,True,True,False,Multi-Command (serial run) test.
