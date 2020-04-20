@@ -57,6 +57,7 @@ __Requirements:__
 
 __Required libraries:__
 
+* PySide2
 * webbrowser
 * pyperclip
 * notify2
