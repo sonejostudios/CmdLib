@@ -1,5 +1,5 @@
 # CmdLib
-A Command Library with GUI for GNU/Linux
+A Command Library GUI for GNU/Linux.
 
 
 
@@ -29,6 +29,7 @@ __Main Features:__
 * Insert you scripts directly into the library
 * Open scripts and selected files directly
 * Integrate it to Caja/Nautilus via a script
+* The library is a simple csv file (easily editable with LibreOffice)
 
 
   
