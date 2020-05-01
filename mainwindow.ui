@@ -154,7 +154,7 @@
                 <enum>Qt::DefaultContextMenu</enum>
                </property>
                <property name="toolTip">
-                <string>Command library (Ctrl+L)</string>
+                <string>Command library (Ctrl+L or Tab)</string>
                </property>
                <property name="statusTip">
                 <string/>

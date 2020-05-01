@@ -81,7 +81,7 @@ Now, when you go to a directory, start CmdLibWorkdir.sh with the context menu. I
 __Shortcuts:__
 
 * Ctrl+F = Focus on Find/Search
-* Ctrl+L = Focus on Library
+* Ctrl+L or Tab = Focus on Library
 * Ctrl+Return = Run Command 
 * Ctrl+N = Create new commands
 * Delete = Delete selected command from library

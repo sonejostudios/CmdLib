@@ -169,7 +169,7 @@ class CmdLib(QMainWindow):
 
         # focus on lib
         QShortcut(QKeySequence("Ctrl+L"), self.window, self.focus_lib)
-        #QShortcut(QKeySequence(Qt.Key_Tab), self.window, self.focus_lib)
+        QShortcut(QKeySequence(Qt.Key_Tab), self.window, self.focus_lib)
 
 
 
