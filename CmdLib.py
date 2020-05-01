@@ -590,12 +590,12 @@ class CmdLib(QMainWindow):
             if type == "insert_name":
                 # insert to cmd_field at cursor
                 self.window.cmd_field.insertPlainText(os.path.basename(file_path))
-                self.notify("File name inserted to command!\n" + os.path.basename(file_path))
+                self.notify("File name inserted into the command!\n" + os.path.basename(file_path))
 
             if type == "insert_path":
                 # insert to cmd_field at cursor
                 self.window.cmd_field.insertPlainText(file_path)
-                self.notify("File path inserted to command!\n" + file_path)
+                self.notify("File path inserted into the command!\n" + file_path)
 
             if type == "copy_name":
                 # copy to clipboard
