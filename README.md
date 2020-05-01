@@ -58,10 +58,8 @@ __Requirements:__
 __Required libraries:__
 
 * PySide2
-* webbrowser
 * pyperclip
 * notify2
-* urllib.parse
 * pandas
 
 (use sudo pip install to install tem)
