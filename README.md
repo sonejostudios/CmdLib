@@ -43,11 +43,11 @@ git clone https://github.com/sonejostudios/CmdLib.git
 
 2. from this folder start CmdLib with:
 ```
-CmdLib.sh
+sh CmdLib.sh
 ```
 or
 ```
-python3 BookerDB.py
+python3 CmdLib.py
 ```
 
 __Requirements:__
