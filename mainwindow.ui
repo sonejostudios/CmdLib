@@ -404,7 +404,7 @@
                    <enum>Qt::ClickFocus</enum>
                   </property>
                   <property name="toolTip">
-                   <string>Command name</string>
+                   <string/>
                   </property>
                   <property name="statusTip">
                    <string/>
@@ -478,7 +478,7 @@
                <enum>Qt::DefaultContextMenu</enum>
               </property>
               <property name="toolTip">
-               <string>Command description</string>
+               <string/>
               </property>
               <property name="statusTip">
                <string/>
@@ -597,7 +597,7 @@ Sequence (checked) = run all commands as a queue</string>
                  <enum>Qt::ClickFocus</enum>
                 </property>
                 <property name="toolTip">
-                 <string>Enter a command or one command per line (queue mode)
+                 <string>Enter a command or one command per line (Multi-Cmd Mode)
 Comment lines with #
 Start with HOLD to hold the terminal.</string>
                 </property>
