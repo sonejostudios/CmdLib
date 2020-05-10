@@ -5,7 +5,7 @@ A Command Library GUI for GNU/Linux.
 
 __Description:__
 
-CmdLib is a small library app for your favorite commands. The idea started because I was so tired to look up all the time for commands I already used once... With CmdLib, you can collect them all in one place, and you'll have them for the future. You can search your commands, put them in categories with names and descriptions, create command lists and even export them to bash scripts.
+CmdLib is a small library app for your favorite commands. The idea started because I was so tired to look up all the time for commands I already used once... With CmdLib, you can collect them all in one place, and you'll have them for the future. You can search your commands, put them in categories with names and descriptions, create command lists and even export them to bash scripts!
 
 
 ![screenshot](https://github.com/sonejostudios/CmdLib/blob/master/CmdLib.png "CmdLib")
