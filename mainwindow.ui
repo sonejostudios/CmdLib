@@ -424,6 +424,12 @@
                 </item>
                 <item>
                  <widget class="QComboBox" name="category_box">
+                  <property name="minimumSize">
+                   <size>
+                    <width>120</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="focusPolicy">
                    <enum>Qt::ClickFocus</enum>
                   </property>
