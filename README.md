@@ -62,7 +62,7 @@ __Required libraries:__
 * notify2
 * pandas
 
-(use sudo pip install to install tem)
+(use sudo pip3 install to install them)
 
 
 __Caja/Nautilus Integration:__
