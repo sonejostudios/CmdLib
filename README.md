@@ -1,8 +1,6 @@
 # CmdLib
 A Command Library GUI for GNU/Linux.
 
-AAA
-
 
 __Description:__
 
