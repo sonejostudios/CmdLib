@@ -584,6 +584,11 @@ class CmdLib(QMainWindow):
 
         file = QFileDialog.getOpenFileName(None, "Add File", self.window.workdir_line.text())
         file_path = file[0]
+
+        # handle spaces in file names
+        if " " in file_path:
+            file_path = file_path.replace(" ", "\ ")
+
         print(file_path)
 
         if file_path != "":
