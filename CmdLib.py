@@ -19,10 +19,20 @@ from PySide2.QtCore import QFile, QObject, Qt
 from PySide2.QtGui import QKeySequence
 
 
+# themes
+#import qdarktheme
+#from qt_material import apply_stylesheet #https://pypi.org/project/qt-material/
+
+
 
 # import about dialog
 from about import About
 
+
+
+pd.set_option('display.max_columns', 14)
+#pd.set_option('display.max_rows', 10)
+pd.set_option('display.width', 1000)
 
 
 
@@ -43,7 +53,7 @@ class CmdLib(QMainWindow):
 
         # app name and version
         self.appname = "CmdLib"
-        self.version = "0.1"
+        self.version = "1.2"
 
 
         # set fixed window size
@@ -51,9 +61,12 @@ class CmdLib(QMainWindow):
 
 
 
-        # set title and center window
-        self.window.setWindowTitle(self.appname)
-        self.center_window()
+        # set title
+        self.window.setWindowTitle(self.appname + " " + self.version)
+
+        # center window
+        # not needed anymore?
+        #self.center_window()
 
 
 
@@ -492,14 +505,16 @@ class CmdLib(QMainWindow):
             workdir = os.getcwd() + "/scripts"
 
         print("show", workdir)
-        webbrowser.open('file:///' + workdir)
+        #webbrowser.open('file:///' + workdir)
+        subprocess.call(["xdg-open", workdir])
 
 
 
     def open_scriptsdir(self):
         workdir = os.getcwd() + "/scripts"
         print("show", workdir)
-        webbrowser.open('file:///' + workdir)
+        #webbrowser.open('file:///' + workdir)
+        subprocess.call(["xdg-open", workdir])
 
 
 
@@ -949,7 +964,7 @@ class CmdLib(QMainWindow):
         # filter
         if word != "":
             # create new df with search results
-            df_found = self.df[self.df.astype(str).add('|').sum(1).str.contains(word)]
+            df_found = self.df[self.df.astype(str).add('|').sum(1).str.contains(word, case=False)]
             #print(df_found)
 
             # clear cmd_list and repopulate
@@ -1035,22 +1050,19 @@ class CmdLib(QMainWindow):
 
 
     def reorder_cmds(self):
-        print("reorder and save command list")
+        print("reorder after qlist and save df")
 
-        # create list out of items
+        # create list from qlist items
         items = []
         for i in range(self.window.cmd_list.count()):
             items.append(self.window.cmd_list.item(i).text())
 
-        #print(items)
-        df2 = pd.DataFrame(columns=['name', 'command', 'category', 'hold', 'multicmd', 'ps', 'script', 'description'])
+        # create new df with name as index, reindex it by items list and reset index
+        df2 = self.df.set_index('name')
+        df2 = df2.reindex(items)
+        df2 = df2.reset_index()
 
-        # if item found on df, append it to df2
-        for item in items:
-            for index, row in self.df.iterrows():
-                if row["name"] == item:
-                    df2 = df2.append(row)
-
+        # copy back and save
         self.df = df2
         self.save_cmd_list()
 
@@ -1133,6 +1145,9 @@ if __name__ == '__main__':
 
     #style = QStyleFactory.create('GTK+')
     #app.setStyle(style)
+
+    #qdarktheme.setup_theme("dark")
+    #apply_stylesheet(app, theme='dark_lightgreen_mm.xml')
 
     myapp = CmdLib()
     sys.exit(app.exec_())
